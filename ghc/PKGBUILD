@@ -118,9 +118,9 @@ package() {
     install -m644 LICENSE \
         ${pkgdir}/usr/share/licenses/ghc
 
-    mkdir ${pkgdir}/usr/lib/ghc-${_ghcver}/shared
-    (cd ${pkgdir}/usr/lib/ghc-${_ghcver}/shared;
-     for f in $(find .. -name \*-ghc${_ghcver}.so); do
+    mkdir ${pkgdir}/usr/lib/ghc-${pkgver}/shared
+    (cd ${pkgdir}/usr/lib/ghc-${pkgver}/shared;
+     for f in $(find .. -name \*-ghc${pkgver}.so); do
        ln -s $f
      done
     )
