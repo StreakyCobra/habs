@@ -117,6 +117,13 @@ package() {
     install -d ${pkgdir}/usr/share/licenses/ghc
     install -m644 LICENSE \
         ${pkgdir}/usr/share/licenses/ghc
+
+    mkdir ${pkgdir}/usr/lib/ghc-${_ghcver}/shared
+    (cd ${pkgdir}/usr/lib/ghc-${_ghcver}/shared;
+     for f in $(find .. -name \*-ghc${_ghcver}.so); do
+       ln -s $f
+     done
+    )
 }
 
 sha256sums=('92f3e3d67a637c587c49b61c704a670953509eb4b17a93c0c2ac153da4cd3aa0'
