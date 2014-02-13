@@ -2,6 +2,7 @@ DOCDIR=/usr/share/doc/ghc/html/libraries
 
 post_install() {
     ${DOCDIR}/arch-gen-contents-index
+    ldconfig
 }
 
 pre_upgrade() {
