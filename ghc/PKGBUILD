@@ -67,7 +67,8 @@ replaces=('haskell-array<0.5.1.0'
 
 source=("http://www.haskell.org/ghc/dist/7.10.1/ghc-${pkgver}-src.tar.xz"
         "http://www.haskell.org/ghc/dist/7.10.1/ghc-${pkgver}-testsuite.tar.xz"
-        'build.mk' 'arch-gen-contents-index')
+        'build.mk' 'arch-gen-contents-index'
+        'haskell.conf')
 
 prepare() {
     cd "${srcdir}/${pkgname}-${pkgver}"
@@ -132,4 +133,5 @@ package() {
 sha256sums=('92f3e3d67a637c587c49b61c704a670953509eb4b17a93c0c2ac153da4cd3aa0'
             '33bbdfcfa50363526ea9671c8c1f01b7c5dec01372604d45cbb53bb2515298cb'
             'f6f08c0fd1098396beba515db06d6c5f3aac633b56e2d35cbcefaf76272ee9af'
-            'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c')
+            'f800cd0de93ae9926bb65c6324d6ce3e1ee814dae9c70c7a7bce28e5deb8245c'
+            '203e825e481b864e54154e0e3cc3eefef982982b0308598f431d1632402b40b9')
