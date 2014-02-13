@@ -118,6 +118,9 @@ package() {
     install -m644 LICENSE \
         ${pkgdir}/usr/share/licenses/ghc
 
+    install -D ${srcdir}/haskell.conf ${pkgdir}/etc/ld.so.conf.d/haskell.conf
+    install -d ${pkgdir}/usr/share/ghc-${pkgver}/shared
+
     mkdir ${pkgdir}/usr/lib/ghc-${pkgver}/shared
     (cd ${pkgdir}/usr/lib/ghc-${pkgver}/shared;
      for f in $(find .. -name \*-ghc${pkgver}.so); do
